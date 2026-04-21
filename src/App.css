@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+  padding: 40px;
+}
+
+.tracker-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Стили формы */
+.tracker-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.input-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.btn-ok {
+  padding: 10px 30px;
+  height: 42px;
+  /* Выравниваем по высоте с инпутами */
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-ok:hover {
+  background-color: #f0f0f0;
+}
+
+/* Стили списка (таблицы) */
+.tracker-list-container {
+  margin-top: 20px;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 15px;
+  /* Отступ от заголовков до рамки */
+}
+
+.list-body {
+  /* Перенесли рамку сюда, чтобы она обхватывала только сами записи */
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 10px 0;
+  min-height: 100px;
+  /* Чтобы пустая рамка красиво смотрелась, если нет записей */
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  align-items: center;
+  padding: 15px 0;
+}
+
+/* Делаем так, чтобы у последнего элемента не было отступа снизу */
+.list-row:last-child {
+  padding-bottom: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+}
+
+.edit-btn:hover {
+  color: #0066cc;
+}
+
+.delete-btn:hover {
+  color: #cc0000;
+  font-weight: bold;
+}
+
+.empty-msg {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
